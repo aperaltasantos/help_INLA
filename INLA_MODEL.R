@@ -121,7 +121,7 @@ EU_NUTS <- readOGR(dsn = "NUTS_2.shp", layer = "NUTS_RG_01M_2016_4326_LEVL_2")
 ########################
 
 library(spdep)
-EU_NUTS.neigh <- poly2nb(EU_NUTS3)
+EU_NUTS.neigh <- poly2nb(EU_NUTS)
 library(INLA)
 nb2INLA('EU_NUTS.neigh.graph',EU_NUTS.neigh)
 
